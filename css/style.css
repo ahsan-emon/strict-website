@@ -1,0 +1,266 @@
+/* font link  */
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
+
+/* common  */
+body {
+  font-family: "Lato", sans-serif;
+}
+.navbar-light .navbar-nav .nav-link {
+  color: #2d3950;
+  text-transform: uppercase;
+}
+/* slider start  */
+.slider {
+  background-image: url("../images/banner.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  height: 90vh;
+}
+.slider h1 {
+  font-size: 100px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.slider span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  margin: auto;
+  background: #15a4fa;
+  border-radius: 30px;
+  opacity: 0.7;
+  margin-bottom: 20px;
+}
+.slider button {
+  border: 1px solid #15a4fa;
+  padding: 7px 15px;
+}
+.slider button:hover {
+  background-color: #15a4fa;
+}
+.slider-icon {
+  font-size: 30px;
+  color: #fff;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: dropDown 0.4s ease-in infinite alternate;
+}
+/* slider icon animation  */
+@keyframes dropDown {
+  0% {
+    bottom: 70px;
+  }
+  100% {
+    bottom: 80px;
+  }
+}
+/* simple section start  */
+.simple {
+  background: #f6f9f9;
+}
+.simple h1 {
+  color: #2d3950;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+.simple p {
+  color: #999999;
+  font-size: 16px;
+}
+/* features start  */
+.icon-box {
+  width: 75px;
+  height: 75px;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#48baff+0,48baff+50,5fc3ff+50,5fc3ff+100 */
+  background: #48baff; /* Old browsers */
+  background: -moz-linear-gradient(
+    left,
+    #48baff 0%,
+    #48baff 50%,
+    #5fc3ff 50%,
+    #5fc3ff 100%
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    left,
+    #48baff 0%,
+    #48baff 50%,
+    #5fc3ff 50%,
+    #5fc3ff 100%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    to right,
+    #48baff 0%,
+    #48baff 50%,
+    #5fc3ff 50%,
+    #5fc3ff 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#48baff', endColorstr='#5fc3ff',GradientType=1 ); /* IE6-9 */
+  margin: auto;
+  color: #fff;
+  font-size: 35px;
+  border-radius: 2px;
+  margin-bottom: 15px;
+}
+.features h2 {
+  font-size: 20px;
+  color: #2d3950;
+}
+.features p {
+  font-size: 14px;
+  color: #999999;
+}
+/* work section start  */
+.work {
+  background: #f6f9f9;
+}
+.work h1 {
+  color: #2d3950;
+  font-size: 28px;
+}
+.work p {
+  color: #999999;
+  font-size: 14px;
+}
+.item {
+  border-radius: 3px;
+  overflow: hidden;
+}
+.item::before {
+  content: "";
+  width: 0%;
+  height: 100%;
+  background: #15a4fa;
+  opacity: 0.8;
+  position: absolute;
+  left: 0;
+  transition: 0.4s all ease-in-out;
+}
+.item::after {
+  content: "";
+  width: 0%;
+  height: 100%;
+  background: #15a4fa;
+  opacity: 0.8;
+  position: absolute;
+  right: 0;
+  transition: 0.4s all ease-in-out;
+}
+.item:hover::before {
+  width: 50%;
+}
+.item:hover::after {
+  width: 50%;
+}
+.action {
+  position: absolute;
+  left: 50%;
+  top: 70%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  z-index: 9;
+  opacity: 0;
+  transition: 0.4s all ease-in-out;
+}
+.action ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.action ul li {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 14px;
+  border-radius: 3px;
+}
+.item:hover .action {
+  opacity: 1;
+  top: 50%;
+}
+/* contact section start  */
+.contact {
+  background: #2c374c;
+}
+.contact h1 {
+  color: #fff;
+  font-size: 28px;
+}
+.contact p {
+  color: #999999;
+  font-size: 14px;
+}
+.contact form {
+  overflow: hidden;
+}
+.contact form input,
+.contact form textarea {
+  padding: 13px 15px;
+  outline: none;
+  border: 1px solid #999999;
+  color: #fff;
+  font-size: 16px;
+}
+.contact form input:focus,
+.contact form textarea:focus {
+  border: 1px solid #15a4fa;
+  box-shadow: none;
+  color: #fff;
+}
+.contact form input::placeholder,
+.contact form textarea::placeholder {
+  color: #999999;
+  font-size: 14px;
+}
+.contact form input[type="submit"] {
+  background: transparent;
+  color: #fff;
+  border: 1px solid #15a4fa;
+  float: right;
+  padding: 6px 40px;
+  font-size: 14px;
+  border-radius: 3px;
+}
+.contact form input[type="submit"]:hover {
+  background: #15a4fa;
+}
+.contact form input[type="checkbox"] {
+  background: #9ba1ab;
+  border: none;
+  padding: 5px;
+  margin-right: 10px;
+}
+/* footer start  */
+footer {
+  background: #f6f9f9;
+}
+footer p {
+  font-size: 14px;
+  color: #999999;
+}
+footer ul li {
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #15a4fa;
+  margin-left: 5px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+footer ul li:hover {
+  background: #35abf5;
+}
+footer ul li a {
+  color: #fff;
+  font-size: 14px;
+}
+footer ul li a:hover {
+  color: #fff;
+}
